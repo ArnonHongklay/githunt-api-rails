@@ -7,6 +7,7 @@
 CommentType = GraphQL::ObjectType.define do
   name "Comment"
 
+  field :id, !types.Int
   field :postedBy, !UserType, property: :poster
   field :createdAt, !types.Float, property: :created_at
   field :content, !types.String

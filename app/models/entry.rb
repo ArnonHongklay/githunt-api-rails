@@ -5,7 +5,9 @@ class Entry < ActiveRecord::Base
     if (type == 'NEW')
       order(created_at: :desc)
     elsif (type == 'TOP')
-      order(score: :desc)
+      # ?
+      order(created_at: :desc)
+      # order(score: :desc)
     else
       throw "NOT A FEED TYPE: #{type}"
     end

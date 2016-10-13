@@ -13,7 +13,7 @@ EntryType = GraphQL::ObjectType.define do
   name "Entry"
 
   field :repository, !RepositoryType
-  field :postedBy, !UserType
+  field :postedBy, !UserType, property: :poster
   field :createdAt, !types.Float, property: :created_at
   field :score, !types.Int, nil
   field :comments, types[CommentType]

@@ -21,7 +21,10 @@ MutationType = GraphQL::ObjectType.define do
       user = ctx[:user]
       throw 'Must be logged in to submit a repository.' unless user
 
-      # XXX: todo
+      Entry.create(
+        posted_by: user.username,
+        repository_name: args[:repoFullName]
+      )
     }
   end
 

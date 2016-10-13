@@ -35,4 +35,12 @@ class Entry < ActiveRecord::Base
   def comment(user, content)
     comments.by(user).create(content: content)
   end
+
+  def poster
+    User.find_by_login(posted_by)
+  end
+
+  def repository
+    Repository.find_by_repository_name(repository_name)
+  end
 end

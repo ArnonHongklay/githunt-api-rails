@@ -26,5 +26,8 @@ QueryType = GraphQL::ObjectType.define do
     argument :repoFullName, !types.String
   end
 
-  field :currentUser, UserType
+  field :currentUser do
+    type UserType
+    resolve -> (_, _, ctx) { ctx[:user] }
+  end
 end

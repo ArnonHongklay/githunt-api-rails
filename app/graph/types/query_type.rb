@@ -31,6 +31,10 @@ QueryType = GraphQL::ObjectType.define do
     type EntryType
 
     argument :repoFullName, !types.String
+
+    resolve -> (_, args, _) do
+      Entry.where(repository_name: args[:repoFullName]).first
+    end
   end
 
   field :currentUser do

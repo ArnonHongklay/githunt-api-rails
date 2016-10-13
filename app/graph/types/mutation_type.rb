@@ -16,6 +16,13 @@ MutationType = GraphQL::ObjectType.define do
     type EntryType
 
     argument :repoFullName, !types.String
+
+    resolve -> (_, args, ctx) {
+      user = ctx[:user]
+      throw 'Must be logged in to submit a repository.' unless user
+
+      # XXX: todo
+    }
   end
 
   field :vote do
@@ -23,6 +30,17 @@ MutationType = GraphQL::ObjectType.define do
 
     argument :repoFullName, !types.String
     argument :type, !VoteTypeType
+
+    resolve -> (_, args, ctx) {
+      user = ctx[:user]
+      throw 'Must be logged in to submit a repository.' unless user
+
+      entry = Entry.where(repository_name: args[:repoFullName]).first
+      entry.vote(user, args[:type])
+      entry.reload
+
+      entry
+    }
   end
 
   field :submitComment do

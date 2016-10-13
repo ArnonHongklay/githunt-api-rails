@@ -24,6 +24,11 @@ class Entry < ActiveRecord::Base
   end
 
   def vote_by(user)
-    votes.where(username: user.login).first || OpenStruct.new(vote_value: 0)
+    votes.by(user).first || OpenStruct.new(vote_value: 0)
+  end
+
+  def vote(user, vote_value)
+    votes.by(user).destroy_all
+    votes.by(user).create(vote_value: vote_value)
   end
 end

@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'graphql', '~>0.13'
 gem 'graphiql-rails'
+gem 'optics-agent'
 # gem 'graphql-libgraphqlparser', '~> 0.2'
 
 # Use ActiveModel has_secure_password

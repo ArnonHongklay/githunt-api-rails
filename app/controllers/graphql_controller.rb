@@ -8,7 +8,12 @@ class GraphqlController < ApplicationController
     query_string = params[:query]
     query_variables = ensure_hash(params[:variables])
     result = GithuntSchema.execute(query_string,
-      variables: query_variables, context: { user: User.default })
+      variables: query_variables,
+      context: {
+        user: User.default,
+        optics_agent: env[:optics_agent].with_document(params)
+      }
+    )
     render json: result
   end
 

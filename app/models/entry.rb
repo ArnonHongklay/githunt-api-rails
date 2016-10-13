@@ -31,4 +31,8 @@ class Entry < ActiveRecord::Base
     votes.by(user).destroy_all
     votes.by(user).create(vote_value: vote_value)
   end
+
+  def comment(user, content)
+    comments.by(user).create(content: content)
+  end
 end

@@ -33,7 +33,7 @@ MutationType = GraphQL::ObjectType.define do
 
     resolve -> (_, args, ctx) {
       user = ctx[:user]
-      throw 'Must be logged in to submit a repository.' unless user
+      throw 'Must be logged in to vote.' unless user
 
       entry = Entry.where(repository_name: args[:repoFullName]).first
       entry.vote(user, args[:type])
@@ -48,5 +48,13 @@ MutationType = GraphQL::ObjectType.define do
 
     argument :repoFullName, !types.String
     argument :commentContent, !types.String
+
+    resolve -> (_, args, ctx) {
+      user = ctx[:user]
+      throw 'Must be logged in to submit a comment.' unless user
+
+      entry = Entry.where(repository_name: args[:repoFullName]).first
+      entry.comment(user, args[:commentContent])
+    }
   end
 end

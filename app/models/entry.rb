@@ -39,10 +39,12 @@ class Entry < ActiveRecord::Base
   end
 
   def poster
-    User.find_by_login(posted_by)
+    OpenStruct.new(Octokit.user(posted_by).to_hash)
   end
 
   def repository
-    Repository.find_by_repository_name(repository_name)
+    repo = OpenStruct.new(Octokit.repository(repository_name).to_hash)
+    repo.owner = OpenStruct.new(repo.owner.to_hash)
+    repo
   end
 end

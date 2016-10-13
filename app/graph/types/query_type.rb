@@ -18,6 +18,13 @@ QueryType = GraphQL::ObjectType.define do
     argument :type, !FeedTypeType
     argument :offset, types.Int
     argument :limit, types.Int
+
+    resolve -> (_, args, _) do
+      Entry.for_feed(args[:type])
+        .offset(args[:offset] || 0)
+        .limit(args[:limit] || 10)
+        .all
+    end
   end
 
   field :entry do

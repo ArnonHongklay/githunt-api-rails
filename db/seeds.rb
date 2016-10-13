@@ -77,10 +77,10 @@ Vote.create(
 Vote.create(
   entry: Entry.where(repository_name: repos[0][:repository_name]).first,
   vote_value: 1,
-  username: 'helfer'
+  username: 'tmeasday'
 )
 Vote.create(
   entry: Entry.where(repository_name: repos[1][:repository_name]).first,
   vote_value: 1,
-  username: 'helfer'
+  username: 'tmeasday'
 )

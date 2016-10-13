@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  repository_name: MyString
+  content: MyText
+  posted_by: MyString
+  timestamps: MyString
+
+two:
+  repository_name: MyString
+  content: MyText
+  posted_by: MyString
+  timestamps: MyString

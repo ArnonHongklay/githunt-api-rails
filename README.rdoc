@@ -1,28 +1,30 @@
-== README
+GitHunt API Rails version
+=========================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a version of https://github.com/apollostack/githunt-api written in Ruby on Rails.
 
-Things you may want to cover:
+It is instrumented with the optics agent.
 
-* Ruby version
+## Getting started
 
-* System dependencies
+1. `bundle install` (you need ruby 2.2+)
 
-* Configuration
+2. `rake db:migrate`; `rake db:seed`
 
-* Database creation
+3. Get GitHub API keys as discussed: https://github.com/apollostack/githunt-api#running-the-server
 
-* Database initialization
+4. Get an Optics API key (currently in early access beta)
 
-* How to run the test suite
+5. Add environment vars (also discussed above)
 
-* Services (job queues, cache servers, search engines, etc.)
+6. Run the app
 
-* Deployment instructions
+```
+rails server --port 3010
+```
 
-* ...
+Open http://localhost:3100 to see a GraphiQL instance.
 
+## GitHunt UI
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This serve does not include a login system or support for batching, so to use you'll need to run a slightly forked version of GitHunt-React, the `rails branch`.

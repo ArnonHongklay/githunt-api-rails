@@ -26,7 +26,8 @@ class Entry < ActiveRecord::Base
   end
 
   def vote_by(user)
-    votes.by(user).first || OpenStruct.new(vote_value: 0)
+    ByUserLoader.for(Vote).load(user.login)
+    # votes.by(user).first || OpenStruct.new(vote_value: 0)
   end
 
   def vote(user, vote_value)

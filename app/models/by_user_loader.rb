@@ -3,7 +3,7 @@ class ByUserLoader < GraphQL::Batch::Loader
     @model = model
   end
 
-  def perform(types)
+  def perform(usernames)
     @model.where(username: usernames).each { |record| fulfill(record.username, record) }
     usernames.each { |username| fulfill(username, nil) unless fulfilled?(username) }
   end

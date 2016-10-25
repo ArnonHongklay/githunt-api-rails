@@ -11,7 +11,7 @@ class GraphqlController < ApplicationController
       variables: query_variables,
       context: {
         user: OpenStruct.new(Octokit.user('tmeasday').to_hash),
-        optics_agent: env[:optics_agent].with_document(params)
+        optics_agent: env[:optics_agent].with_document(query_string)
       }
     )
     render json: result

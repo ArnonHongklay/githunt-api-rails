@@ -18,6 +18,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'octokit'
 gem 'faraday-http-cache'
 
+gem 'unicorn'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

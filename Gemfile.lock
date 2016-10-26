@@ -1,12 +1,11 @@
 GIT
   remote: https://github.com/apollostack/optics-agent-ruby.git
-  revision: 3d8f61cf2d78cb7a80908747413d824c1bb8408d
+  revision: 9ad89ef423504f5b4944925894fe4bad9e5d13e2
   branch: master
   specs:
-    optics-agent (0.1.3)
+    optics-agent (0.2.0)
       google-protobuf (~> 3.1.0)
       graphql (~> 0.19.0)
-      sucker_punch (~> 2.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -86,6 +85,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    kgio (2.10.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -128,6 +128,7 @@ GEM
       activesupport (= 4.2.6)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    raindrops (0.17.0)
     rake (11.3.0)
     rdoc (4.2.2)
       json (~> 1.4)
@@ -154,8 +155,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.12)
-    sucker_punch (2.0.2)
-      concurrent-ruby (~> 1.0.0)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
@@ -166,6 +165,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
+    unicorn (5.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -193,6 +195,7 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
+  unicorn
   web-console (~> 2.0)
 
 BUNDLED WITH

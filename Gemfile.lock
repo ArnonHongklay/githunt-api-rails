@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/apollostack/optics-agent-ruby.git
-  revision: 5a3010a35f7e19dadcc0c1e601758043caba4bab
-  branch: master
+  revision: 89567b4deaed792f8cd98b9fe8806cfae3a22980
+  branch: wait-on-promises
   specs:
     optics-agent (0.1.2)
       google-protobuf (~> 3.1.0)

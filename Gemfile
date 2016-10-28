@@ -29,9 +29,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'graphql', '~>0.13'
 gem 'graphiql-rails'
-gem 'optics-agent', git: 'https://github.com/apollostack/optics-agent-ruby.git', branch: :master
+gem 'optics-agent', git: 'https://github.com/apollostack/optics-agent-ruby.git', branch: 'wait-on-promises'
 # gem 'graphql-libgraphqlparser', '~> 0.2'
-gem 'graphql-batch'
+gem 'graphql-batch', git: 'https://github.com/tmeasday/graphql-batch.git', branch: 'parallel-execution'
 gem 'parallel'
 
 # Use ActiveModel has_secure_password

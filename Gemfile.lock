@@ -1,12 +1,22 @@
 GIT
   remote: https://github.com/apollostack/optics-agent-ruby.git
-  revision: 5a3010a35f7e19dadcc0c1e601758043caba4bab
-  branch: master
+  revision: 89567b4deaed792f8cd98b9fe8806cfae3a22980
+  branch: wait-on-promises
   specs:
     optics-agent (0.1.2)
       google-protobuf (~> 3.1.0)
       graphql (~> 0.19.0)
       sucker_punch (~> 2.0.2)
+
+GIT
+  remote: https://github.com/tmeasday/graphql-batch.git
+  revision: 2a07a70ec1fd93286117e67c0ca8dc528c2187c2
+  branch: parallel-execution
+  specs:
+    graphql-batch (0.2.4)
+      graphql (~> 0.8)
+      parallel (~> 1.9.0)
+      promise.rb (~> 0.7.0.rc2)
 
 GEM
   remote: https://rubygems.org/
@@ -77,9 +87,6 @@ GEM
     graphiql-rails (1.2.0)
       rails
     graphql (0.19.2)
-    graphql-batch (0.2.4)
-      graphql (~> 0.8)
-      promise.rb (~> 0.7.0.rc2)
     i18n (0.7.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -187,7 +194,7 @@ DEPENDENCIES
   faraday-http-cache
   graphiql-rails
   graphql (~> 0.13)
-  graphql-batch
+  graphql-batch!
   jbuilder (~> 2.0)
   jquery-rails
   octokit

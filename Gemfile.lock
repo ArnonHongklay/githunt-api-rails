@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/apollostack/optics-agent-ruby.git
-  revision: 9ad89ef423504f5b4944925894fe4bad9e5d13e2
+  revision: b91376074edd6748a8aeb36f96f4e40c4fe4576d
   branch: master
   specs:
-    optics-agent (0.2.0)
+    optics-agent (0.3.0)
       google-protobuf (~> 3.1.0)
       graphql (~> 0.19.0)
 

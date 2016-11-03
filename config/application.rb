@@ -26,6 +26,7 @@ module GithuntApiRails
     config.active_record.raise_in_transactional_callbacks = true
 
     config.optics_agent = OpticsAgent::Agent.instance
+    config.optics_agent.set_options(debug: true)
     config.middleware.use config.optics_agent.rack_middleware
   end
 end

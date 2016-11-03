@@ -20,7 +20,7 @@ It is instrumented with the optics agent.
 6. Run the app
 
 ```
-rails server --port 3010
+bundle exec unicorn -p 3010 -c ./config/unicorn.rb
 ```
 
 Open http://localhost:3100 to see a GraphiQL instance.

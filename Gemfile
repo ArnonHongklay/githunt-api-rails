@@ -18,7 +18,7 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'octokit'
 gem 'faraday-http-cache'
 
-gem 'unicorn'
+gem 'unicorn-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

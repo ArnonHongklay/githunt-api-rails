@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/apollostack/optics-agent-ruby.git
-  revision: b91376074edd6748a8aeb36f96f4e40c4fe4576d
+  revision: a64d123daddb33e829421fff4bf97fd7d0b7e65d
   branch: master
   specs:
     optics-agent (0.3.0)
@@ -165,9 +165,12 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
-    unicorn (5.1.0)
+    unicorn (5.2.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    unicorn-rails (2.2.1)
+      rack
+      unicorn
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -195,8 +198,8 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
-  unicorn
+  unicorn-rails
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.13.5
+   1.13.6

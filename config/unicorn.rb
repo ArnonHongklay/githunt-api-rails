@@ -1,6 +1,6 @@
 puts "in unicorn.rb"
 
-worker_procs = ENV['UNICORN_WORKERS'] ? ENV['UNICORN_WORKERS'].to_i : 2
+worker_procs = ENV['UNICORN_WORKERS'] ? ENV['UNICORN_WORKERS'].to_i : 8
 
 worker_processes worker_procs
 timeout 28

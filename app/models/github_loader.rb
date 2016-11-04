@@ -6,7 +6,7 @@ class GithubLoader < GraphQL::Batch::Loader
   def perform(ids)
     puts "performing #{ids}"
 
-    results = Parallel.map(ids) do |id|
+    results = Parallel.map(ids, in_threads: 8) do |id|
       result = Octokit.send(@method, id)
       [id, OpenStruct.new(result.to_h)]
     end

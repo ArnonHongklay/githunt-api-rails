@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/apollostack/optics-agent-ruby.git
-  revision: b91376074edd6748a8aeb36f96f4e40c4fe4576d
+  revision: a64d123daddb33e829421fff4bf97fd7d0b7e65d
   branch: master
   specs:
     optics-agent (0.3.0)
@@ -193,4 +193,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.13.5
+   1.13.6

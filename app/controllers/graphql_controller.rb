@@ -10,8 +10,7 @@ class GraphqlController < ApplicationController
     result = GithuntSchema.execute(query_string,
       variables: query_variables,
       context: {
-        user: OpenStruct.new(Octokit.user('tmeasday').to_hash),
-        optics_agent: env[:optics_agent].with_document(query_string)
+        user: OpenStruct.new(Octokit.user('tmeasday').to_hash)
       }
     )
     render json: result

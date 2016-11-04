@@ -22,5 +22,7 @@ RepositoryType = GraphQL::ObjectType.define do
   field :open_issues_count, !types.Int
   field :created_at, !types.String
 
-  field :owner, UserType
+  field :owner, UserType do
+    resolve -> (repository, _, _) { OpenStruct.new(repository.owner.to_h) }
+  end
 end

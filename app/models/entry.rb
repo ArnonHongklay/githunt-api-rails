@@ -40,12 +40,10 @@ class Entry < ActiveRecord::Base
   end
 
   def poster
-    OpenStruct.new(Octokit.user(posted_by).to_hash)
+    GithubLoader.for(:user).load(posted_by)
   end
 
   def repository
-    repo = OpenStruct.new(Octokit.repository(repository_name).to_hash)
-    repo.owner = OpenStruct.new(repo.owner.to_hash)
-    repo
+    GithubLoader.for(:repository).load(repository_name)
   end
 end

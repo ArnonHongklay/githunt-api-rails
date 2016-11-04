@@ -34,6 +34,7 @@ gem 'graphiql-rails'
 gem 'graphql-batch'
 # gem 'optics-agent', git: 'https://github.com/apollostack/optics-agent-ruby.git', branch: :master
 # gem 'graphql-libgraphqlparser', '~> 0.2'
+gem 'parallel'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

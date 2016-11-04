@@ -94,6 +94,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     octokit (4.4.1)
       sawyer (~> 0.7.0, >= 0.5.3)
+    parallel (1.9.0)
     pg (0.19.0)
     promise.rb (0.7.1)
     rack (1.6.4)
@@ -191,6 +192,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   octokit
+  parallel
   pg
   rails (= 4.2.6)
   rails_12factor

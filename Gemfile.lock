@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/apollostack/optics-agent-ruby.git
-  revision: a64d123daddb33e829421fff4bf97fd7d0b7e65d
+  revision: 8924f703b534935a5b798632dc0ef8325dffca78
   branch: master
   specs:
-    optics-agent (0.3.0)
+    optics-agent (0.3.1)
       google-protobuf (~> 3.1.0)
       graphql (~> 0.19.0)
 
@@ -101,6 +101,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
+    pg (0.19.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -191,6 +192,7 @@ DEPENDENCIES
   jquery-rails
   octokit
   optics-agent!
+  pg
   rails (= 4.2.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

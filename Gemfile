@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 
 
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails'
 gem 'octokit'
 gem 'faraday-http-cache'
 

@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'graphql', '~>0.13'
+gem 'graphql', '~> 1.1.0'
 gem 'graphiql-rails'
 gem 'optics-agent', git: 'https://github.com/apollostack/optics-agent-ruby.git', branch: :master
 # gem 'graphql-libgraphqlparser', '~> 0.2'

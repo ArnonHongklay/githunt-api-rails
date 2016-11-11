@@ -1,15 +1,3 @@
-GIT
-  remote: https://github.com/apollostack/optics-agent-ruby.git
-  revision: fa0d8b26084f082aba46d37dd7608b9ca13cf9de
-  branch: master
-  specs:
-    optics-agent (0.4.0)
-      faraday (~> 0.9.2)
-      google-protobuf (~> 3.1.0)
-      graphql (~> 1.1.0)
-      hitimes (~> 1.2.4)
-      net-http-persistent (~> 2.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -106,6 +94,12 @@ GEM
       mini_portile2 (~> 2.1.0)
     octokit (4.6.0)
       sawyer (~> 0.8.0, >= 0.5.3)
+    optics-agent (0.4.0)
+      faraday (~> 0.9.2)
+      google-protobuf (~> 3.1.0)
+      graphql (~> 1.1.0)
+      hitimes (~> 1.2.4)
+      net-http-persistent (~> 2.0.0)
     public_suffix (2.0.4)
     rack (1.6.5)
     rack-test (0.6.3)
@@ -188,7 +182,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   octokit
-  optics-agent!
+  optics-agent (~> 0.4.0)
   rails (= 4.2.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
